@@ -100,6 +100,12 @@ public class Function {
     // }
     // }
 
+    //      BINARY TO DECIMAL NO;
+    public static void biToDec(int myNum) {
+            int dec = 0
+            int pow = 0
+    }
+
     
 
     /***************************************************************************************************/
@@ -124,7 +130,7 @@ public class Function {
 
         // isPrime(1673);
 
-        printPrimeInRange(100);
+        // printPrimeInRange(100);
 
     }
 }
