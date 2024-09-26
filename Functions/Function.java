@@ -49,35 +49,58 @@ public class Function {
         return sum;
     }
 
-    //          Prime or Not
+    // Prime or Not
 
-    public static boolean isPrime(int n) {
-        boolean prime = true;
-        if (n == 2) {
-            System.out.println("prime.");
-        } else {
-            for (int i = 2; i <= Math.sqrt(n); i++) {
-                if (n % i == 0) {
-                    prime = false;
-                }                
+    // public static void primeInRange(int n) {
+    //     for (int j = 2; j <= n; j++) {
+    //         boolean prime = true;
+    //         for (int i = 2; i <= Math.sqrt(n); i++) {
+    //             if (n % i == 0) {
+    //                 prime = false;
+    //                 break;
+    //             }
+    //         }
+    //         if (prime) {
+    //             System.out.print(j + " ");
+    //         }
+            
+    //     }
+    //     System.out.println();
+    // }
+
+    public static void printPrimeInRange(int n) {
+        // System.out.println("Prime numbers between " " and " + n + " are:");
+        
+        for (int number = 1; number <= n; number++) {
+            boolean isPrime = true;
+
+            if (number <= 1) {
+                isPrime = false; // 0 and 1 are not prime
             }
-            // if (prime == true) {
-            //     System.out.println("Prime.");
-            // } else {
-            //     System.out.println("Not Prime.");
-            // }
-        }
 
-        return prime;
+            for (int i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    isPrime = false; // Not prime if divisible by any number other than 1 and itself
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                System.out.print(number + " ");
+            }
+        }
+        System.out.println(); // New line after printing all primes
     }
 
     // public static void primeInRange(int n) {
-    //     for (int i = 2; i <= n; i++) {
-    //         if (isPrime(i)) {
-    //             System.out.print(i + " ");
-    //         }
-    //     }
+    // for (int i = 2; i <= n; i++) {
+    // if (isPrime(i)) {
+    // System.out.print(i + " ");
     // }
+    // }
+    // }
+
+    
 
     /***************************************************************************************************/
     public static void main(String[] args) {
@@ -101,7 +124,7 @@ public class Function {
 
         // isPrime(1673);
 
-        primeInRange(100);
+        printPrimeInRange(100);
 
     }
 }
