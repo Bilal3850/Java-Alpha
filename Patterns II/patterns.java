@@ -17,7 +17,7 @@ public class patterns {
 
     public static void rotatedTriangle(int n) {
         for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n-i; j++) {
+            for (int j = 1; j <= n - i; j++) {
                 System.out.print(" ");
             }
             for (int j = 1; j <= i; j++) {
@@ -29,7 +29,7 @@ public class patterns {
 
     public static void rotatedNumTri(int n) {
         for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n-i+1 ; j++) {
+            for (int j = 1; j <= n - i + 1; j++) {
                 System.out.print(j);
             }
             System.out.println();
@@ -50,7 +50,7 @@ public class patterns {
     public static void triangle_0_1(int n) {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
-                if ((i + j)% 2 == 0) {
+                if ((i + j) % 2 == 0) {
                     System.out.print("1 ");
                 } else {
                     System.out.print("0 ");
@@ -59,7 +59,7 @@ public class patterns {
             System.out.println();
         }
     }
-    
+
     public static void butterfly(int n) {
         // 1st half
         for (int i = 1; i <= n; i++) {
@@ -68,7 +68,7 @@ public class patterns {
                 System.out.print(" * ");
             }
             // Spaces ---
-            for (int j = 1; j <= 2*(n-i); j++) {
+            for (int j = 1; j <= 2 * (n - i); j++) {
                 System.out.print("   ");
             }
             // stars *
@@ -85,7 +85,7 @@ public class patterns {
                 System.out.print(" * ");
             }
             // Spaces ---
-            for (int j = 1; j <= 2*(n-i); j++) {
+            for (int j = 1; j <= 2 * (n - i); j++) {
                 System.out.print("   ");
             }
             // stars *
@@ -95,15 +95,14 @@ public class patterns {
             System.out.println();
         }
 
-        
-    }   // solid Rombas
+    } // solid Rombas
 
     public static void Rombas(int n) {
         // outer loop
         for (int i = 1; i <= n; i++) {
             // inner Loop
             // print space
-            for (int j = 1; j <= n-i; j++) {
+            for (int j = 1; j <= n - i; j++) {
                 System.out.print("   ");
             }
             // print *
@@ -117,8 +116,8 @@ public class patterns {
     // Hollow Rhombus
     public static void hollow_Rombus(int n) {
         for (int i = 1; i <= n; i++) {
-            
-            for (int j = 1; j <= (n-i); j++) {
+
+            for (int j = 1; j <= (n - i); j++) {
                 System.out.print("   ");
             }
             for (int j = 1; j <= n; j++) {
@@ -134,11 +133,42 @@ public class patterns {
 
     public static void diamond(int n) {
         for (int i = 1; i <= n; i++) {
-            for (int j = i; j <= n-1; j++) {
+            for (int j = i; j <= n - 1; j++) {
                 System.out.print("   ");
             }
-            for (int j = 1; j <= 2*i-1; j++) {
+            for (int j = 1; j <= 2 * i - 1; j++) {
                 System.out.print(" * ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void numberPyramid(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("-");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print( i + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void palindromicNoTri(int n) {
+        for (int i = 1; i <= n; i++) {
+            // spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            // Num
+            // Desending
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j);
+            }
+            // Assending
+            for (int j = 2; j <= i; j++) {
+                System.out.print(j);
             }
             System.out.println();
         }
@@ -153,6 +183,8 @@ public class patterns {
         // butterfly(5);
         // Rombas(9);
         // hollow_Rombus(7);
-        diamond(5);
+        // diamond(5);
+        // numberPyramid(5);
+        palindromicNoTri(6);
     }
 }
