@@ -100,6 +100,31 @@ public class Function {
     // }
     // }
 
+    //      BINARY TO DECIMAL NO;
+    public static void biToDec(int myNum) {
+        int dec = 0;
+        int pow = 0;
+        int byNum = myNum;
+        while (myNum > 0) {
+            int lastDig = myNum % 10;
+            dec = dec + (lastDig * (int)Math.pow(2, pow));
+            pow++;
+            myNum = myNum / 10;
+        }
+
+        System.out.println("Decimal of " + byNum + " = " + dec);
+    }
+
+    public static void decToBi(int n) {
+        int myNum = n;
+        int binNum = 0;
+        for (int pow = 0; n > 0; pow++) {
+            int rem = n % 2;
+            binNum = binNum + (rem * (int)Math.pow(10, pow));
+            n /= 2;
+        }
+        System.out.println("Binary of " + myNum + " = " + binNum);
+    }
     
 
     /***************************************************************************************************/
@@ -124,7 +149,10 @@ public class Function {
 
         // isPrime(1673);
 
-        printPrimeInRange(100);
+        // printPrimeInRange(100);
+
+        biToDec(1101);
+        decToBi(13);
 
     }
 }
