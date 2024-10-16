@@ -130,7 +130,7 @@ public class strings {
         //     System.out.println("!=");
         // }
 
-        // * Compare Strings with another Strings *//
+        // * Compare Strings with another Strings *// 
         
         // String fruit[] = {"apple", "banana", "graps"};
         // compareStrings(fruit);
