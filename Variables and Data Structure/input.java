@@ -7,7 +7,7 @@ public class input {
 
         // String name = sc.nextLine();
         // // boolean bool = sc.nextBoolean();
-        // System.out.println(bilal);
+        // System.out.println(name);
 
         /*
         int a = sc.nextInt();
